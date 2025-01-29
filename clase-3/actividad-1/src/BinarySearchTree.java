@@ -16,6 +16,23 @@ public class BinarySearchTree {
         return searchBST(root.right, x);
     }
 
+
+    public static int getHeight(TreeNode root) {
+        // Caso base: si el nodo es nulo, la altura es -1
+        if (root == null) {
+            return -1;
+        }
+
+        // Calcular la altura del subárbol izquierdo
+        int leftHeight = getHeight(root.left);
+
+        // Calcular la altura del subárbol derecho
+        int rightHeight = getHeight(root.right);
+
+        // La altura del nodo actual es el máximo de las alturas de sus subárboles más uno
+        return Math.max(leftHeight, rightHeight) +1;
+    }
+
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
 
@@ -28,6 +45,10 @@ public class BinarySearchTree {
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(25);
         root.right.right.right = new TreeNode(30);
+
+        int resultado=getHeight(root);
+
+        System.out.println("La altura del arbol es: "+resultado);
 
 
     }
