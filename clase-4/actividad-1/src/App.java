@@ -11,7 +11,7 @@ public class App {
         clientes.add(cliente2);
         clientes.add(cliente3);
         Cliente clienteMaxScore = actividad1(clientes, 0, clientes.size()-1);
-        System.out.println("El cliente con scoring maximo es: " + clienteMaxScore);
+        System.out.println("El cliente con scoring maximo es: " + clienteMaxScore.getNombre() + " con un score de " + clienteMaxScore.getScoring());
     }
 
     static Cliente actividad1(List<Cliente> clientes, int inicio, int fin) {
@@ -20,8 +20,8 @@ public class App {
         }
 
         int medio = (inicio + fin) / 2;
-        Cliente maxIzq = actividad1(clientes, inicio, medio);
-        Cliente maxDer = actividad1(clientes, medio, fin);
+        Cliente maxIzq = actividad1(clientes, inicio, medio-1);
+        Cliente maxDer = actividad1(clientes, medio+1, fin);
         
         if (maxDer.getScoring() > maxIzq.getScoring()) {
             return maxDer;
