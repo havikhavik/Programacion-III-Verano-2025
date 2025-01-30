@@ -1,9 +1,9 @@
 public class Cliente {
     private String id;
     private String nombre;
-    private String scoring;
+    private int scoring;
 
-    public Cliente(String id, String nombre, String scoring) {
+    public Cliente(String id, String nombre, int scoring) {
         this.id = id;
         this.nombre = nombre;
         this.scoring = scoring;
@@ -15,7 +15,7 @@ public class Cliente {
     public String getNombre() {
         return nombre;
     }
-    public String getScoring() {
+    public int getScoring() {
         return scoring;
     }
 }
