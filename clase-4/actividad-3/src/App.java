@@ -4,42 +4,50 @@ import java.util.List;
 public class App {
 
     public static void main(String[] args) {
-        List<Persona> personas = new ArrayList<>();
-        personas.add(new Persona(1, "Juan", 85));
-        personas.add(new Persona(2, "María", 90));
-        personas.add(new Persona(3, "Pedro", 78));
-        personas.add(new Persona(4, "Lucía", 95));
-        personas.add(new Persona(5, "Carlos", 80));
-        personas.add(new Persona(6, "Ana", 88));
-        personas.add(new Persona(7, "Luis", 92));
-        personas.add(new Persona(8, "Sofía", 75));
-        personas.add(new Persona(9, "Marta", 50));
-        personas.add(new Persona(10, "Jorge", 70));
+        List<Cliente> clientes = new ArrayList<>();
+        List<Cliente> clientesVacio = new ArrayList<>();
+        List<Cliente> unSoloCliente = new ArrayList<>();
+        clientes.add(new Cliente(1, "Juan", 85));
+        clientes.add(new Cliente(2, "María", 90));
+        clientes.add(new Cliente(3, "Pedro", 78));
+        clientes.add(new Cliente(4, "Lucía", 95));
+        clientes.add(new Cliente(5, "Carlos", 80));
+        clientes.add(new Cliente(6, "Ana", 88));
+        clientes.add(new Cliente(7, "Luis", 92));
+        clientes.add(new Cliente(8, "Sofía", 75));
+        clientes.add(new Cliente(9, "Marta", 50));
+        clientes.add(new Cliente(10, "Jorge", 70));
 
-        List<Persona> top2 = buscarDosMaximos(personas, 0, personas.size() - 1);
 
-        System.out.println("Top 2 personas con mayor scoring:");
-        for (Persona p : top2) {
-            System.out.println(p);
+        List<Cliente> top2 = buscarDosMaximos(clientes, 0, clientes.size() - 1);
+
+        System.out.println("Top 2 clientes con mayor scoring:");
+        for (Cliente c : top2) {
+            System.out.println(c);
         }
     }
 
-    private static List<Persona> buscarDosMaximos(List<Persona> personas, int inicio, int fin) {
-        if (inicio == fin) {
-            List<Persona> lista = new ArrayList<>();
-            lista.add(personas.get(inicio));
+    private static List<Cliente> buscarDosMaximos(List<Cliente> clientes, int inicio, int fin) {
+
+        if (clientes == null || clientes.isEmpty()) {
+            return new ArrayList<>(); // Retorna una lista vacía si el array de clientes es nulo
+        }
+
+        if (inicio == fin) { // caso base
+            List<Cliente> lista = new ArrayList<>();
+            lista.add(clientes.get(inicio));
             return lista;
         }
 
         int medio = (inicio + fin) / 2;
-        List<Persona> maxIzq = buscarDosMaximos(personas, inicio, medio);
-        List<Persona> maxDer = buscarDosMaximos(personas, medio + 1, fin);
+        List<Cliente> maxIzq = buscarDosMaximos(clientes, inicio, medio);
+        List<Cliente> maxDer = buscarDosMaximos(clientes, medio + 1, fin);
 
         return combinarMaximos(maxIzq, maxDer);
     }
 
-    private static List<Persona> combinarMaximos(List<Persona> izq, List<Persona> der) {
-        List<Persona> todos = new ArrayList<>();
+    private static List<Cliente> combinarMaximos(List<Cliente> izq, List<Cliente> der) {
+        List<Cliente> todos = new ArrayList<>();
         todos.addAll(izq);
         todos.addAll(der);
 
@@ -50,12 +58,12 @@ public class App {
         return todos.subList(0, Math.min(2, todos.size()));
     }
 
-    static class Persona {
+    static class Cliente {
         private int id;
         private String nombre;
         private int scoring;
 
-        public Persona(int id, String nombre, int scoring) {
+        public Cliente(int id, String nombre, int scoring) {
             this.id = id;
             this.nombre = nombre;
             this.scoring = scoring;
