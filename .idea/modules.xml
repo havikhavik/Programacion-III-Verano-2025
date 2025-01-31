@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Programacion-III-Verano-2025.iml" filepath="$PROJECT_DIR$/.idea/Programacion-III-Verano-2025.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-2/actividad-1/actividad-1.iml" filepath="$PROJECT_DIR$/clase-2/actividad-1/actividad-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-4/actividad-1/actividad-11.iml" filepath="$PROJECT_DIR$/clase-4/actividad-1/actividad-11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-3/actividad-1/actividad-12.iml" filepath="$PROJECT_DIR$/clase-3/actividad-1/actividad-12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-1/actividad-2/actividad-2.iml" filepath="$PROJECT_DIR$/clase-1/actividad-2/actividad-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-4/actividad-2/actividad-21.iml" filepath="$PROJECT_DIR$/clase-4/actividad-2/actividad-21.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-3/actividad-2/actividad-22.iml" filepath="$PROJECT_DIR$/clase-3/actividad-2/actividad-22.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-2/actividad-2/actividad-23.iml" filepath="$PROJECT_DIR$/clase-2/actividad-2/actividad-23.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-1/actividad-3/actividad-3.iml" filepath="$PROJECT_DIR$/clase-1/actividad-3/actividad-3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-3/actividad-3/actividad-31.iml" filepath="$PROJECT_DIR$/clase-3/actividad-3/actividad-31.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-4/actividad-3/actividad-32.iml" filepath="$PROJECT_DIR$/clase-4/actividad-3/actividad-32.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-2/actividad-3/actividad-33.iml" filepath="$PROJECT_DIR$/clase-2/actividad-3/actividad-33.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-1/actividad-4/actividad-4.iml" filepath="$PROJECT_DIR$/clase-1/actividad-4/actividad-4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-4/actividad-4/actividad-41.iml" filepath="$PROJECT_DIR$/clase-4/actividad-4/actividad-41.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-3/actividad-4/actividad-42.iml" filepath="$PROJECT_DIR$/clase-3/actividad-4/actividad-42.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-1/actividad-5/actividad-5.iml" filepath="$PROJECT_DIR$/clase-1/actividad-5/actividad-5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-4/actividad-5/actividad-51.iml" filepath="$PROJECT_DIR$/clase-4/actividad-5/actividad-51.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-2/actividad-5/actividad-52.iml" filepath="$PROJECT_DIR$/clase-2/actividad-5/actividad-52.iml" />
+    </modules>
+  </component>
+</project>
