@@ -6,11 +6,11 @@ import java.util.List;
 public class App {
     public static void main(String[] args) throws Exception {
         List<Integer> monedas = List.of(10, 1, 5, 2, 10, 10, 5, 2, 5, 5, 5, 5, 5, 5, 10);
-        List<Integer> vuelto = actividad1(new ArrayList<>(monedas), 47);
+        List<Integer> vuelto = actividad1(new ArrayList<>(monedas), 200);
         System.out.println(vuelto);
     }
 
-    static List<Integer> actividad1(List<Integer> monedas, Integer vuelto) {
+    static List<Integer> actividad1(List<Integer> monedas, Integer vuelto) throws Exception {
         List<Integer> resultado = new ArrayList<>();
         Collections.sort(monedas, Comparator.reverseOrder()); //ordenar de mayor a menor
         
@@ -20,6 +20,10 @@ public class App {
                 resultado.add(moneda);
             }
         });
+
+        if(resultado.stream().mapToInt(n->n).sum()<vuelto){
+            throw new Exception("No se pudo completar el vuelto");
+        }
         return resultado;
     }
 }
