@@ -1,24 +1,17 @@
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
 
 public class Actividad4 {
-
 
     // Complete the getMinimumCost function below.
     static int getMinimumCost(int k, int[] c) {
         if (c.length == 0 || k == 0) {
-            return 0; //casos base
+            return 0; // casos base
         }
 
         if (k == c.length) { // hay un amigo para cada flor
             int precioTotal = 0;
             for (int i = 0; i < c.length; i++) {
-                precioTotal = precioTotal + c[i];
+                precioTotal += c[i];
             }
             return precioTotal;
         } else if (k < c.length) { // el grupo de amigos es menor que la cantidad de flores
@@ -37,42 +30,21 @@ public class Actividad4 {
                 comprasAnteriores++;
             }
             return precioTotal;
-
-
         }
 
         return 0;
-
     }
 
-    private static final Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+        // Aquí puedes definir los parámetros manualmente
+        int n = 6; // Número de flores
+        int k = 3; // Número de amigos
+        int[] c = {2, 5, 6, 1, 3, 4}; // Costos de las flores
 
-    public static void main(String[] args) throws IOException {
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
-        String[] nk = scanner.nextLine().split(" ");
-
-        int n = Integer.parseInt(nk[0]);
-
-        int k = Integer.parseInt(nk[1]);
-
-        int[] c = new int[n];
-
-        String[] cItems = scanner.nextLine().split(" ");
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-
-        for (int i = 0; i < n; i++) {
-            int cItem = Integer.parseInt(cItems[i]);
-            c[i] = cItem;
-        }
-
+        // Calcular el costo mínimo
         int minimumCost = getMinimumCost(k, c);
 
-        bufferedWriter.write(String.valueOf(minimumCost));
-        bufferedWriter.newLine();
-
-        bufferedWriter.close();
-
-        scanner.close();
+        // Imprimir el costo mínimo en la consola
+        System.out.println(minimumCost);
     }
 }
