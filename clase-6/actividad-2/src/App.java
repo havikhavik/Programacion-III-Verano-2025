@@ -10,11 +10,21 @@ public class App {
         System.out.println("Matriz de Adyacencia:");
         grafo.mostrarMatriz();
         
-        System.out.println("Adyacentes de fila 0: " + grafo.listarAdyacentes(0));
-        System.out.println("Adyacentes de fila 1: " + grafo.listarAdyacentes(1));
-        System.out.println("Adyacentes de fila 3: " + grafo.listarAdyacentes(3));
-        System.out.println("Grado de salida de fila 0: " + grafo.contarGradoSalida(0));
-        System.out.println("Grado de entrada de fila 3: " + grafo.contarGradoEntrada(3));
+        System.out.println("Adyacentes de vertice 0: " + grafo.listarAdyacentes(0));
+        System.out.println("Adyacentes de vertice 1: " + grafo.listarAdyacentes(1));
+        System.out.println("Adyacentes de vertice 3: " + grafo.listarAdyacentes(3));
+        System.out.println("Adyacentes de vertice 4: " + grafo.listarAdyacentes(4));
+
+        /*
+         * Grado de entrada: Es el número de aristas que llegan a un vértice.
+         * Grado de salida: Es el número de aristas que salen de un vértice.
+         */
+        System.out.println("Grado de salida (fila) de vertice 0: " + grafo.contarGradoSalida(0));
+        System.out.println("Grado de entrada (columna) de vertice 0: " + grafo.contarGradoEntrada(0));
+        System.out.println("Grado de salida (fila) de vertice 3: " + grafo.contarGradoSalida(3));
+        System.out.println("Grado de entrada (columna) de vertice 3: " + grafo.contarGradoEntrada(3));
+        System.out.println("Grado de salida (fila) de vertice 4: " + grafo.contarGradoSalida(4));
+        System.out.println("Grado de entrada (columna) de vertice 4: " + grafo.contarGradoEntrada(4));
     }
     
 }
