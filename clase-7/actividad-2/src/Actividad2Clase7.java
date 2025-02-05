@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class App {
+public class Actividad2Clase7 {
 
     public static void main(String[] args) {
 
