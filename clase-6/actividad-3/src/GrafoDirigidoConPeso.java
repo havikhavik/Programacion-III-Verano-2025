@@ -28,25 +28,27 @@ class GrafoDirigidoConPeso {
     }
 
     public void primMST() { //minimum cost spanning tree
-        boolean[] visitado = new boolean[numVertices];
+        boolean[] visitado = new boolean[numVertices]; //Array para marcar qué vértices ya han sido incluidos en el MST
         PriorityQueue<Arista> pq = new PriorityQueue<>();
         List<Arista> resultado = new ArrayList<>();
         int costoTotal = 0;
 
-        visitado[0] = true;
-        pq.addAll(listaAdyacencia.get(0));
+        visitado[0] = true; //Se marca el nodo 0 como visitado, comienza desde este nodo
+        pq.addAll(listaAdyacencia.get(0)); //Se agregan las aristas conectadas al nodo 0 a la cola de prioridad
 
         while (!pq.isEmpty() && resultado.size() < numVertices - 1) {
-            Arista arista = pq.poll();
-            if (visitado[arista.destino]) continue;
+            Arista arista = pq.poll(); //Se extrae la arista de menor costo
+            if (visitado[arista.destino]) {
+                continue; //Si el destino ya está en el MST, se ignora
+            }
+            visitado[arista.destino] = true; //Se marca el nuevo nodo como visitado
+            resultado.add(arista); //Se agrega la arista al MST
+            costoTotal += arista.peso; //Se suma el costo de la arista al costo total
             
-            visitado[arista.destino] = true;
-            resultado.add(arista);
-            costoTotal += arista.peso;
-            
+            //Se recorren todas las aristas del nodo recién agregado
             for (Arista adyacente : listaAdyacencia.get(arista.destino)) {
                 if (!visitado[adyacente.destino]) {
-                    pq.add(adyacente);
+                    pq.add(adyacente); //Si el nodo destino no ha sido visitado, se agrega a la cola de prioridad
                 }
             }
         }
