@@ -19,6 +19,14 @@ class GrafoDirigidoConPeso {
         listaAdyacencia.get(destino).add(new Arista(destino, origen, peso));
     }
 
+    public void mostrarGrafo() {
+        listaAdyacencia.forEach(aristas -> {
+            aristas.forEach(arista -> 
+                System.out.println(arista.origen + " -> " + arista.destino + ", peso: " + arista.peso)
+            );
+        });
+    }
+
     public void primMST() { //minimum cost spanning tree
         boolean[] visitado = new boolean[numVertices];
         PriorityQueue<Arista> pq = new PriorityQueue<>();

@@ -10,6 +10,7 @@ public class App {
         grafo.agregarArista(2, 4, 7);
         grafo.agregarArista(3, 4, 9);
 
+        grafo.mostrarGrafo();
         grafo.primMST();
     }
 
