@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Grafo {
+public class GrafoDirigido {
     private int[][] matriz;
     private int numVertices;
 
-    public Grafo(int numVertices) {
+    public GrafoDirigido(int numVertices) {
         this.numVertices = numVertices;
         matriz = new int[numVertices][numVertices];
     }

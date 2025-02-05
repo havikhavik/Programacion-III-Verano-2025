@@ -1,6 +1,6 @@
 public class App {
     public static void main(String[] args) {
-        Grafo grafo = new Grafo(5);
+        GrafoDirigido grafo = new GrafoDirigido(5);
         
         grafo.agregarArista(0, 1);
         grafo.agregarArista(0, 2);
