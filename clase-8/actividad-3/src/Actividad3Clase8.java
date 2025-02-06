@@ -1,11 +1,11 @@
 
 import java.util.Scanner;
 
-public class LogisticaRutasOptimizadas {
+public class Actividad3Clase8 {
     final static int INF = 99999;  // Usamos un valor grande para representar el infinito
 
     public static void main(String[] args) {
-        LogisticaRutasOptimizadas logistica = new LogisticaRutasOptimizadas();
+        Actividad3Clase8 logistica = new Actividad3Clase8();
         int tiempoViaje[][] = {
                 {0, 8, 5},
                 {3, 0, INF},
@@ -14,7 +14,17 @@ public class LogisticaRutasOptimizadas {
         int numCentros = tiempoViaje.length;
         logistica.optimizarRutas(tiempoViaje, numCentros);
 
+        // Pedir centros de distribución de origen y destino
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el centro de distribución de origen (0 a " + (numCentros - 1) + "): ");
+        int origen = sc.nextInt();
+        System.out.print("Ingrese el centro de distribución de destino (0 a " + (numCentros - 1) + "): ");
+        int destino = sc.nextInt();
 
+        // Imprimir el camino más corto entre el origen y el destino
+        System.out.print("El camino más corto desde " + origen + " hasta " + destino + " es: ");
+        logistica.imprimirRuta(origen, destino);
+        sc.close();
     }
 
     // Variables de instancia para la matriz de tiempos y la matriz de recuperación de rutas
@@ -52,6 +62,16 @@ public class LogisticaRutasOptimizadas {
 
         // Imprimir la matriz de tiempos mínimos
         imprimirSolucion(tiempoMinimo, numCentros);
+    }
+
+    // Función para imprimir el camino más corto usando la matriz ruta
+    void imprimirRuta(int origen, int destino) {
+        if (ruta[origen][destino] == -1) {
+            System.out.println("No hay ruta entre " + origen + " y " + destino);
+            return;
+        }
+        imprimirRutaRecursiva(origen, destino);
+        System.out.println(destino); // Finalmente imprimimos el destino
     }
 
     // Método recursivo para reconstruir la ruta desde origen hasta destino
