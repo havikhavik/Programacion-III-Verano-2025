@@ -1,0 +1,15 @@
+El algoritmo de Floyd-Warshall se emplea en diversos campos para determinar las rutas más cortas entre todos los pares de nodos en un grafo ponderado. A continuación, se presentan algunas aplicaciones específicas:
+
+    Diseño de circuitos electrónicos: En la ingeniería electrónica, el algoritmo se utiliza para optimizar las rutas de señal en circuitos integrados, asegurando que las señales viajen la menor distancia posible y mejorando así la eficiencia del circuito.
+    inteligencia2010.wordpress.com
+
+    Planificación de rutas de transporte: En logística y gestión del transporte, se aplica para encontrar las rutas más cortas entre múltiples destinos, optimizando la distribución de bienes y reduciendo costos operativos.
+    inteligencia2010.wordpress.com
+
+    Análisis de redes de comunicación: En el ámbito de las telecomunicaciones, el algoritmo ayuda a determinar las rutas óptimas para la transmisión de datos entre nodos en una red, mejorando la eficiencia y reduciendo la latencia en la comunicación.
+    Wikipedia, the free encyclopedia
+
+    Aprendizaje por refuerzo en robótica: Un estudio titulado "Floyd-Warshall Reinforcement Learning: Learning from Past Experiences to Reach New Goals" adapta el algoritmo para mejorar la eficiencia en tareas de navegación y manipulación en robótica, permitiendo que los agentes aprendan de experiencias pasadas para alcanzar nuevos objetivos de manera más efectiva.
+    arxiv.org
+
+Estas aplicaciones destacan la versatilidad del algoritmo de Floyd-Warshall en la resolución de problemas complejos en diversos dominios.
