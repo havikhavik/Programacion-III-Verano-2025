@@ -1,4 +1,4 @@
-public class App {
+public class Actividad2Clase7 {
     static int maxValor = 0;
 
     public static void main(String[] args) {
