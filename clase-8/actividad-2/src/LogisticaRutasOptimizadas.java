@@ -1,6 +1,4 @@
 
-import java.util.Scanner;
-
 public class LogisticaRutasOptimizadas {
     final static int INF = 99999;  // Usamos un valor grande para representar el infinito
 
