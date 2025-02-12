@@ -12,8 +12,29 @@
       <sourceFolder url="file://$MODULE_DIR$/clase-7/actividad-4/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/clase-8/actividad-2/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/clase-8/actividad-3/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clase-9/actividad-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clase-11/actividad-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clase-9/actividad-1y2/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/clase-9/actividad-1/lib/gson-2.8.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/clase-9/gson-2.8.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
