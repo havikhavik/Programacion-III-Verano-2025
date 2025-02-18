@@ -1,0 +1,43 @@
+¿Cómo funciona el Backtracking en este problema?
+
+    Colocación recursiva: Se intenta colocar una reina en cada fila del tablero.
+    Verificación de seguridad: Antes de colocar una reina en (row, col), se usa isSafe para comprobar si es seguro colocarla ahí.
+    Exploración recursiva: Si la colocación es válida, se avanza a la siguiente fila (solve(board, row + 1)).
+    Retroceso (Backtracking):
+        Si una fila no tiene ninguna posición válida para una reina, significa que una colocación anterior fue incorrecta.
+        Se "deshace" la última colocación (board[row][col] = 0) y se intenta la siguiente columna en la fila anterior.
+
+¿Qué pasa cuando el algoritmo encuentra una solución?
+
+    Si se colocaron N reinas correctamente (row == N), el algoritmo devuelve true.
+    En este punto, el tablero tiene una solución válida y se puede imprimir.
+
+¿Qué ocurre cuando no puede colocar más reinas?
+
+    Si en una fila no se puede colocar ninguna reina, significa que hay una configuración inválida en las filas anteriores.
+    El algoritmo retrocede a la fila anterior y prueba una nueva posición para la reina anterior.
+    Si después de probar todas las combinaciones no hay solución, el algoritmo termina sin encontrar una disposición válida.
+
+¿Qué sucede en el código cuando el algoritmo "retrocede"?
+
+    Cuando se encuentra un bloqueo (ninguna reina puede ser colocada en la fila actual), se regresa a la fila anterior.
+    Se elimina la última reina colocada y se prueba la siguiente columna en esa fila.
+    En Python Tutor, este retroceso se visualizaría como una recursión que vuelve a una llamada anterior y prueba un nuevo camino.
+
+Modificaciones para aumentar N a 8
+
+    Cambiar private static final int N = 30; por private static final int N = 8;.
+    No se requiere ningún otro cambio en el código.
+
+Impacto en el tiempo de ejecución:
+
+    Para N = 8, el algoritmo es rápido (~92 soluciones posibles en poco tiempo).
+    Para N = 30, el tiempo de ejecución aumenta exponencialmente (el algoritmo explorará muchas configuraciones antes de encontrar una solución o determinar que no hay ninguna).
+
+¿Por qué el método isSafe es crucial en este algoritmo?
+
+    Reduce la cantidad de soluciones inválidas exploradas.
+    Evita colocar reinas en posiciones conflictivas.
+    Permite que el algoritmo avance de forma eficiente sin perder tiempo en configuraciones incorrectas.
+
+Sin isSafe, el algoritmo intentaría colocar reinas en todas las posiciones sin validar y tendría que retroceder constantemente, lo que haría que el tiempo de ejecución aumente drásticamente.
