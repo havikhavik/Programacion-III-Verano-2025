@@ -7,7 +7,7 @@ public class TwoQueensBacktracking {
 
     public static void main(String[] args) {
         int[][] board = new int[SIZE][SIZE]; // Tablero vacío
-        placeQueens(board, 0, 0, 0);
+        placeQueens(board, 0, 0);
 
         System.out.println("Soluciones encontradas: " + solutions.size());
         for (int[][] solution : solutions) {
@@ -15,7 +15,7 @@ public class TwoQueensBacktracking {
         }
     }
 
-    private static void placeQueens(int[][] board, int row, int col, int count) {
+    private static void placeQueens(int[][] board, int row, int count) {
         if (count == 2) { // Se colocaron las dos reinas
             saveSolution(board);
             return;
@@ -25,12 +25,13 @@ public class TwoQueensBacktracking {
             for (int j = 0; j < SIZE; j++) {
                 if (isSafe(board, i, j)) {
                     board[i][j] = 1; // Colocar reina
-                    placeQueens(board, i + 1, 0, count + 1); // Pasar a la siguiente fila
+                    placeQueens(board, i + 1, count + 1); // Pasar a la siguiente fila
                     board[i][j] = 0; // Backtracking
                 }
             }
         }
     }
+
 
     private static boolean isSafe(int[][] board, int row, int col) {
         // Verificar columna
